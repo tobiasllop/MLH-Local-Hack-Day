@@ -9,4 +9,7 @@ df.drop_duplicates(subset = "Location", inplace = True)
 #Calculate the average
 x = df["First Tooltip"].mean()
 
+#Limit the average to two digits
+x = "{:.2f}".format(x)
+
 print(f"The average of dentists per 10,000 people in the world is {x}")
